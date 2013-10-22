@@ -104,7 +104,12 @@ Default layout, loads most of the pages
                     <action method="setElementClass"><value>bottom-container</value></action>
                 </block>
                 <block type="page/switch" name="store_switcher" as="store_switcher" template="page/switch/stores.phtml"/>
-                <block type="page/template_links" name="footer_links" as="footer_links" template="page/template/links.phtml"/>
+                <!--<block type="page/template_links" name="footer_links" as="footer_links" template="page/template/links.phtml"/>-->
+				<block type="cms/block" name="footer_links2"><action method="setBlockId"><block_id>footer_links2</block_id></action></block>
+				<block type="cms/block" name="contact_us"><action method="setBlockId"><block_id>contact_us</block_id></action></block>
+				
+				<block type="cms/block" name="payment"><action method="setBlockId"><block_id>payment</block_id></action></block>
+				
             </block>
 
             <block type="core/text_list" name="before_body_end" as="before_body_end" translate="label">

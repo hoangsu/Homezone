@@ -24,10 +24,14 @@
  * @license     http://opensource.org/licenses/afl-3.0.php  Academic Free License (AFL 3.0)
  */
 ?>
-<div class="footer-container">
+<div class="footer-container box-shadow">
     <div class="footer">
-        <?php echo $this->getChildHtml() ?>
-        <p class="bugs"><?php echo $this->__('Help Us to Keep Magento Healthy') ?> - <a href="http://www.magentocommerce.com/bug-tracking" onclick="this.target='_blank'"><strong><?php echo $this->__('Report All Bugs') ?></strong></a> <?php echo $this->__('(ver. %s)', Mage::getVersion()) ?></p>
-        <address><?php echo $this->getCopyright() ?></address>
+		<?php echo $this->getLayout()->createBlock('cms/block')->setBlockId('footer_links')->toHtml() ?>
+		<?php echo $this->getChildHtml('store_switcher') ?>
+        <?php echo $this->getChildHtml('footer_links2') ?>
+		<?php echo $this->getChildHtml('contact_us') ?>
+		<?php echo $this->getChildHtml('footer.newsletter') ?>
+		<?php echo $this->getChildHtml('payment') ?>
     </div>
+	<address class="copyright"><div><?php echo $this->getCopyright() ?></div></address>
 </div>
