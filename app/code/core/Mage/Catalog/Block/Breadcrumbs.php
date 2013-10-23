@@ -54,7 +54,7 @@ class Mage_Catalog_Block_Breadcrumbs extends Mage_Core_Block_Template
     {
         if ($breadcrumbsBlock = $this->getLayout()->getBlock('breadcrumbs')) {
             $breadcrumbsBlock->addCrumb('home', array(
-                'label'=>Mage::helper('catalog')->__('Home'),
+                'label'=>Mage::helper('catalog')->__('Home Zone'),
                 'title'=>Mage::helper('catalog')->__('Go to Home Page'),
                 'link'=>Mage::getBaseUrl()
             ));
