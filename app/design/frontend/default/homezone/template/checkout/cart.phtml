@@ -31,7 +31,7 @@
  * @see Mage_Checkout_Block_Cart
  */
 ?>
-<div class="cart">
+<div class="cart box-shadow">
     <div class="page-title title-buttons">
         <h1><?php echo $this->__('Shopping Cart') ?></h1>
         <?php if(!$this->hasError()): ?>
@@ -48,27 +48,24 @@
     <?php echo $this->getChildHtml('form_before') ?>
     <form action="<?php echo $this->getUrl('checkout/cart/updatePost') ?>" method="post">
         <fieldset>
-            <table id="shopping-cart-table" class="data-table cart-table">
-                <col width="1" />
-                <col />
-                <col width="1" />
+            <table id="shopping-cart-table" class="data-table cart-table" >
+             
             <?php if ($this->helper('wishlist')->isAllowInCart()) : ?>
-                <col width="1" />
-            <?php endif ?>
+                            <?php endif ?>
             <?php if ($this->helper('tax')->displayCartPriceExclTax() || $this->helper('tax')->displayCartBothPrices()): ?>
-                <col width="1" />
+                
             <?php endif; ?>
             <?php if ($this->helper('tax')->displayCartPriceInclTax() || $this->helper('tax')->displayCartBothPrices()): ?>
-                <col width="1" />
+                
             <?php endif; ?>
-                <col width="1" />
+                
             <?php if ($this->helper('tax')->displayCartPriceExclTax() || $this->helper('tax')->displayCartBothPrices()): ?>
-                <col width="1" />
+                
             <?php endif; ?>
             <?php if ($this->helper('tax')->displayCartPriceInclTax() || $this->helper('tax')->displayCartBothPrices()): ?>
-                <col width="1" />
+               
             <?php endif; ?>
-                <col width="1" />
+                
 
             <?php $mergedCells = ($this->helper('tax')->displayCartBothPrices() ? 2 : 1); ?>
                 <thead>
