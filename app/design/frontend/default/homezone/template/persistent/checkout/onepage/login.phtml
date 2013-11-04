@@ -61,7 +61,7 @@
             <p><?php echo $this->__('Register with us for future convenience:') ?></p>
             <ul class="ul">
                 <li><?php echo $this->__('Fast and easy check out') ?></li>
-                <li><?php echo $this->__('Easy access to your order history and status') ?></li>
+                <li class="last"><?php echo $this->__('Easy access to your order history and status') ?></li>
             </ul>
         <?php else: ?>
             <input type="hidden" name="checkout_method" id="login:register" value="register" checked="checked" />
@@ -81,7 +81,7 @@
                         <input type="text" class="input-text required-entry validate-email" id="login-email" name="login[username]" value="<?php echo $this->escapeHtml($this->getUsername()) ?>" />
                     </div>
                 </li>
-                <li>
+                <li class="last">
                     <label for="login-password" class="required"><em>*</em><?php echo $this->__('Password') ?></label>
                     <div class="input-box">
                         <input type="password" class="input-text required-entry" id="login-password" name="login[password]" />
