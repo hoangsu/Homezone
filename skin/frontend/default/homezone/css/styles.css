@@ -105,11 +105,23 @@ ul,ol         { list-style:none; }
 .main {width:990px;  margin:0 auto; min-height:400px;   text-align:left; }
 .cms-home .main{ background: none;}
 .main .main-content{width: 100%;background: #fff; -webkit-box-shadow: 0px 0px 22px 0px rgba(0,0,0,0.15);-moz-box-shadow: 0px 0px 22px 0px rgba(0,0,0,0.15);box-shadow: 0px 0px 22px 0px rgba(0,0,0,0.15);float: left;padding-bottom: 20px !important;}
+.customer-account-index .main .main-content, .customer-account-edit .main .main-content,
+.sales-order-history .main-content,.sales-billing-agreement-index .main-content,.sales-recurring-profile-index .main-content
+ , .review-customer-index .main-content, .tag-customer-index .main-content,.wishlist-index-index .main-content,
+  .oauth-customer-token-index .main-content,.newsletter-manage-index .main-content,
+  .downloadable-customer-products .main-content, .catalogsearch-result-index .main-content{margin: 20px 0 0 0; padding: 20px;width:950px}
+
+.customer-account-index .main .main-content .col-left,.customer-account-edit .main .main-content .col-left,
+.sales-order-history .col-left, .sales-billing-agreement-index .col-left,
+.sales-recurring-profile-index .col-left,.review-customer-index .col-left,
+.tag-customer-index .col-left, .wishlist-index-index .col-left,
+ .oauth-customer-token-index .col-left,  .newsletter-manage-index .col-left,
+  .downloadable-customer-products .col-left,.catalogsearch-result-index .col-left{padding: 0}
 
 /* Base Columns */
 .col-left { float:left; width: 223px; padding: 20px; ;}
 .col-main { float:left; width:707px; padding:0 0 1px; padding:   20px 20px 0 0 ;}
-.col-right { float:right; width:195px; padding:0 0 1px; }
+.col-right { float:right; width: 224px; padding:0 0 1px; }
 
 .cms-home .col-main {width: auto;}
 
@@ -119,6 +131,7 @@ ul,ol         { list-style:none; }
 /* 2 Columns Layout */
 .col2-left-layout .col-main { float:right; }
 .col2-right-layout .col-main {}
+.catalogsearch-result-index .col2-right-layout .col-main {padding: 20px ; width: 950px;  width: 0 auto; background: #fff}
 
 /* 3 Columns Layout */
 .col3-layout .col-main { width:475px; margin-left:17px; }
@@ -295,7 +308,7 @@ input.input-text:focus,select:focus,textarea:focus { background-color:#edf7fd; }
 .form-list .customer-dob .dob-year { width:140px; }
 .form-list .customer-dob .dob-year input.input-text { width:134px; }*/
 
-.buttons-set { clear:both; margin:4em 0 0; padding:8px 0 0; border-top:1px solid #e4e4e4; text-align:right; }
+.buttons-set { clear:both;  padding:8px 0 0; border-top:1px solid #e4e4e4; text-align:right; }
 .buttons-set p.required { margin:0 0 10px; }
 .buttons-set .back-link { float:left; margin:0; }
 .buttons-set button.button { float:right; margin-left:5px; }
@@ -303,8 +316,8 @@ input.input-text:focus,select:focus,textarea:focus { background-color:#edf7fd; }
 .buttons-set-order { margin:10px 0 0; }
 .buttons-set-order .please-wait { padding:12px 7px 0 0; }
 
-.fieldset { border:1px solid #bbafa0; background:#fbfaf6; padding:22px 25px 12px 33px; margin:28px 0; }
-.fieldset .legend { float:left; font-weight:bold; font-size:13px; border:1px solid #f19900; background:#f9f3e3; color:#e76200; margin:-33px 0 0 -10px; padding:0 8px; position:relative; }
+.fieldset { border:1px solid #efefef; background:#fff; padding:22px 25px 12px 33px; margin:28px 0; }
+.fieldset .legend { float: left;font-weight: bold;font-size: 13px;border: 1px solid #8B8B8B;background: #8B8B8B;color: #FFF;margin: -33px 0 0 -10px;padding: 0 8px;position: relative;}
 
 /* Form Validation */
 .validation-advice { clear:both; min-height:13px; margin:3px 0 0; padding-left:17px; font-size:11px; font-weight:bold; line-height:13px; background:url(../images/validation_advice_bg.gif) 2px 0 no-repeat; color:#eb340a; }
@@ -344,9 +357,9 @@ p.required { font-size:11px; text-align:right; color:#EB340A; }
 .breadcrumbs li strong { font-weight:inherit; }
 
 /* Page Heading */
-.page-title { width:100%; overflow:hidden; border-bottom:1px solid #ccc; margin:0 0 25px; }
+.page-title { width:100%; overflow:hidden; border-bottom:1px solid #efefef; margin:0 0 5px; }
 .page-title h1,
-.page-title h2 { margin:0; font-size:20px; color:#0a263c; }
+.page-title h2 { font: bold 14px "Oswald", sans-serif;padding: 0px 10px 10px;color: #8B8B8B;font-weight: inherit; }
 .page-title .separator { margin:0 3px; }
 .page-title .link-rss { float:right; margin:7px 0 0; }
 .title-buttons { text-align:right; }
@@ -687,9 +700,9 @@ tr.summary-details-excluded { font-style:italic; }
 
 /* Block: Account */
 .block-account { border-color:#bbb; }
-.block-account .block-title { background:#fc9d36 url(../images/bkg_block-title-account.gif) 0 100% repeat-x; border:0; padding:3px 10px; }
-.block-account .block-title strong { font-size:13px; color:#fff; }
-.block-account .block-content { background:#fbfaf6; padding:7px 10px 7px; }
+.block-account .block-title { padding: 0; margin: 0 }
+.block-account .block-title strong {font-size: 14px;color: #FFF;font-family: 'Oswald' ,sans-serif;font-weight: inherit;background: #8b8b8b;padding: 13px 0px 11px 0px;text-align: center;margin: 11px 0 0 0;word-spacing: 2px;}
+.block-account .block-content { background:transparent; padding:7px 10px 7px; }
 .block-account .block-content li a { display:block; border-bottom:1px solid #ddd; padding:3px 0; color:#5f5d5c; text-decoration:none !important; }
 .block-account .block-content li a:hover { color:#ea7900; }
 .block-account .block-content li.last a { border-bottom:0; }
@@ -862,6 +875,7 @@ tr.summary-details-excluded { font-style:italic; }
 .category-image img {}
 .category-description { margin:0 0 10px; }
 .category-products { float: left;}
+.catalogsearch-result-index .category-products{width: 100%}
 
 /* View Type: Grid */
 .products-grid {  position:relative; list-style: none !important ; padding: 0 !important; margin: 0}
@@ -937,7 +951,11 @@ tr.summary-details-excluded { font-style:italic; }
 .product-view .product-shop .availability span { font-weight:normal; }
 
 /* Email to a Friend */
-.email-friend { margin:0; }
+.email-friend { font-size:12px; text-align:left;float: right;width: 150px;margin: 4px 0 0 0;border-top: 1px solid #EFEFEF;}
+.email-friend a{color: #D85D60 !important;font-weight: normal !important;font-family: 'Arial' ,sans-serif;font-size: 10px;text-transform: uppercase;text-decoration: none;display: block;padding: 9px 0 6px 38px;word-spacing: 0px;background: url("../images/wishlist-compare-mail.png") 9px -53px no-repeat;}
+.wishlist-email2friend .img-sosial{float: right;margin: 7px 5px 0 0;}
+
+
 
 /* Alerts */
 .alert-price { margin:0; font-size:11px; }
@@ -1045,13 +1063,14 @@ tr.summary-details-excluded { font-style:italic; }
 .product-view .add-to-cart .paypal-logo { margin:0; }
 
 /* Add to Links + Add to Cart */
-.add-to-box { margin:10px 0; }
+.add-to-box { margin:10px 0;padding: 20px 0;border-bottom: 1px solid #EFEFEF; border-top: 1px solid #EFEFEF; }
 .add-to-box .add-to-cart { float:left; }
 .add-to-box .or { float:left; font-weight:bold; margin:0 7px; color:#666; }
 .add-to-box .add-to-links { float:left; margin:0; font-size:12px !important; line-height:1.25 !important; text-align:left !important; }
 .add-to-box .add-to-links li { display:block !important; }
 .add-to-box .add-to-links li .separator { display:none !important; }
 
+.wishlist-email2friend{float: right;width: 150px;}
 
 .product-view { border:1px solid #c4c6c8; }
 
@@ -1099,16 +1118,20 @@ tr.summary-details-excluded { font-style:italic; }
 .product-view .product-shop .product-name h1 { margin: 0;font: 24px "Oswald" , sans-serif;color: #8B8B8B;line-height: 1;word-spacing: 2px;font-weight: inherit; }
 .product-view .product-shop .availability { margin:16px 0; font-size: 12px ; font-family: "Arial" , sans-serif; color: #8b8b8b;  }
 .product-view .product-shop .availability span{font-weight: bold;margin-left: 2px;}
-.product-view .product-shop .short-description { margin:10px 0; background:url(../images/bkg_divider1.gif) 0 0 repeat-x; padding:10px 0 0; }
+.product-view .product-shop .short-description { margin:10px 0; background:url(../images/bkg_divider1.gif) 0 0 repeat-x; padding:10px 0 0; float: left;width: 390px;}
 .product-view .product-shop .short-description h2{display: none;}
-.product-view .product-shop .short-description  .std{display: none;}
-.product-view .product-shop .price-box { margin:24px 0; display: inline-block; float: left;  }
+.product-view .product-shop .short-description  .std{color: #8b8b8b; font-family: 'Oswald' , sans-serif; font-size:12px ; font-weight: inherit;}
+.product-view .product-shop .price-box {  display: inline-block; float: left;  }
 .product-view .product-shop .price-box .regular-price span{color: #d85d60; font-size: 24px; font-family: "Oswald" sans-serif; }
 .product-view .product-shop .add-to-links { margin:0; }
-.product-view .product-shop .add-to-links { font-size:12px; text-align:right; }
+.product-view .product-shop .add-to-links { font-size:12px; text-align:left;float: right;width: 150px;margin: 6px 0 0 0;}
 .product-view .product-shop .add-to-links li,
 .product-view .product-shop .add-to-links li .separator { display:inline; }
-.product-view .product-shop .add-to-links a { color:#1E7EC8 !important; font-weight:normal !important; }
+.product-view .product-shop .add-to-links a { color:#d85d60 !important; font-weight:normal !important; font-family: 'Arial' ,sans-serif;  font-size: 10px;  text-transform: uppercase;  text-decoration: none;display: block;padding: 5px 0 6px 39px;word-spacing: -1px;}
+.product-view .product-shop .add-to-links a.link-wishlist{background: url("../images/wishlist-compare-mail.png") 9px 4px no-repeat;}
+.product-view .product-shop .add-to-links a.link-compare{background: url("../images/wishlist-compare-mail.png") 9px -22px no-repeat;}
+
+
 
 /* Product Options */
 .product-options {float: left; margin:20px 0 0; padding:10px 15px 20px; position:relative; background-color:#f6f6f6; border:1px solid #e4e4e4; }
@@ -1147,11 +1170,11 @@ tr.summary-details-excluded { font-style:italic; }
 .col3-layout .product-options-bottom .price-box { float:none; padding:0 0 5px; }
 .product-options-bottom .price-label { float:left; padding-right:5px; }
 .product-options-bottom .price-tax { float:left; }
-.product-options-bottom .add-to-cart { float:right; margin-top: 2px;}
-.product-options-bottom .add-to-cart button span{display: block;word-spacing: 1px;background: url('../images/btn-button-addtocart.jpg');padding: 5px 10px 5px 32px  !important;font: 14px "Oswald", sans-serif;text-transform: uppercase;white-space: nowrap;color: #fff;font-weight: inherit;}
-.product-options-bottom .add-to-cart button span span{background: none	}
-.product-options-bottom .add-to-cart .qty {float: left;margin-right: 20px;height: 36px;width: 65px !important;border:1px solid #EFEFEF;text-align: center;}
-.product-options-bottom .add-to-cart label{margin: 12px 9px 00;}
+ .add-to-cart { float:right; margin-top: 2px;}
+ .add-to-cart button span{display: block;word-spacing: 1px;background: url('../images/btn-button-addtocart.jpg');padding: 5px 10px 5px 32px  !important;font: 14px "Oswald", sans-serif;text-transform: uppercase;white-space: nowrap;color: #fff;font-weight: inherit;}
+.add-to-cart button span span{background: none;	}
+ .add-to-cart .qty {float: left;margin-right: 20px;height: 36px;width: 65px !important;border:1px solid #EFEFEF;text-align: center;}
+ .add-to-cart label{margin: 12px 9px 00;}
 .product-shop .product-options-bottom { margin:0 0 10px; }
 .product-shop .product-options-bottom .price-box { float:none; margin:6px 0 5px; }
 .product-shop .product-options-bottom .price-label { float:none; padding-right:0; }
@@ -1228,9 +1251,9 @@ tr.summary-details-excluded { font-style:italic; }
 .product-name a { color:#1e7ec8; }
 
 /* Product Tags */
-.tags-list { display:block; font-size:13px; border:1px solid #c1c4bc; background:#f8f7f5; padding:10px; }
-.tags-list li { display:inline !important; margin:0 4px 0 0; }
-.tags-list li a { color:#1b2d3b; }
+.tags-list { margin-bottom: 10px;float: left; }
+.tags-list li {float: left;background: #EFEFEF;margin: 5px 5px 0 0; }
+.tags-list li a { color: #B4B4B4;font-size: 11px;font-family: "Arial" sans-serif;text-decoration: none;padding: 7px 12px;display: block;float: left; }
 
 /* Advanced Search */
 .advanced-search .form-list label { width:160px; padding-right:10px; }
@@ -1488,18 +1511,24 @@ tr.summary-details-excluded { font-style:italic; }
 /********** Common Checkout Styles > */
 
 /* One Page Checkout */
-.block-progress { border:0; margin:0; }
+.block-progress { border:0; margin:0;border: 1px solid #EFEFEF;width: 202px; }
 .block-progress .block-title { background:none; border:0; padding:0; margin:0 0 5px; }
-.block-progress .block-title strong { font-size:13px; color:#0a263c; }
-.block-progress .block-content { background:none; }
-.block-progress dt { font-size:13px; font-weight:bold; line-height:1.35; background:#eee; border:1px solid #a3aeb3; margin:0 0 6px; padding:2px 8px; color:#999; }
-.block-progress dd { background:#eee; border:1px solid #a3aeb3; border-top:0; padding:8px 13px; margin:0 0 6px; }
-.block-progress dt.complete { margin:0; background:#d0dce1; color:#5e8ab4; }
+.block-progress .block-title strong { font-size:14px; color:#fff; font-family: 'Oswald' ,sans-serif; font-weight: inherit; background: #d85d60; padding: 13px 0px 11px 0px;text-align: center;margin: 11px 0 0 0;word-spacing: 2px;}
+.block-progress .block-title strong span{}
+.block-progress .block-content { background:none;margin: 30px 0 0 0;}
+.block-progress dt { font-size:12px; font-weight:bold; line-height:1.35; background:#eee; border-bottom:1px solid #efefef; margin:0 0 6px; padding:2px 8px; color:#999; }
+.block-progress dd { background:#fff;padding:8px 13px 8px 0; margin:0 0 6px; }
+.block-progress dt.complete { margin:0; background:#fff; color:#8b8b8b; padding: 0; }
 .block-progress dd.complete {}
 .block-progress p { margin:0; }
 .block-progress .cards-list dt { background:none; border:0 none; color:inherit; font-size:12px; margin:5px 0; padding:0; }
 .block-progress .cards-list dd { border:0 none; margin:0; padding:0; }
 .block-progress .cards-list .info-table th { font-weight:normal; }
+.opc-block-progress dt.complete .separator{color: #c9c9c9}
+.opc-block-progress dt.complete .changelink a{color: #d85d60; text-decoration: none;}
+
+#shipping-progress-opcheckout{background: #fff; border-left: 0;border-right: 0; border-color: #efefef;}
+.block-progress .block-content dl div dt{background: #fff; border-left: 0;border-right: 0; border-color: #efefef;}
 
 /* show/hide "change" link for progress step depend on complete status
  * should be placed in .css file */
@@ -1693,13 +1722,13 @@ tr.summary-details-excluded { font-style:italic; }
 
 .dashboard .box .box-title { background:url(../images/bkg_divider1.gif) 0 100% repeat-x; padding:0 0 2px; margin:0 0 8px; text-align:right; }
 .dashboard .box .box-title h3,
-.dashboard .box .box-title h4 { float:left; font-size:13px; font-weight:bold; margin:0; }
+.dashboard .box .box-title h4 { font-family: "Arial" ,sans-serif;font-size: 11px;color: #8B8B8B;margin: 0 0 0 0px;float: left; }
 
 /* Block: Recent Orders */
 .dashboard .box-recent .box-head h2 { background-image:url(../images/i_folder-table.gif); }
 
 /* Block: Account Information */
-.dashboard .box-info .box-head h2 { background-image:url(../images/i_ma-info.gif); }
+.dashboard .box-info .box-head h2 {font: bold 14px "Oswald", sans-serif;padding: 0px 10px 10px;color: #8B8B8B;font-weight: inherit; }
 .dashboard .box-info h4 { font-size:11px; font-weight:bold; text-transform:uppercase; }
 
 /* Block: Reviews */
@@ -1711,7 +1740,7 @@ tr.summary-details-excluded { font-style:italic; }
 .dashboard .box-reviews .ratings { margin:7px 0 0; }
 
 /* Block: Tags */
-.dashboard .box-tags .box-head h2 { background-image:url(../images/i_ma-tags.gif); }
+.dashboard .box-tags .box-head h2 { font: bold 14px "Oswald", sans-serif;padding: 0px 10px 10px;color: #8B8B8B;font-weight: inherit;}
 .dashboard .box-tags .number { float:left; font-size:10px; font-weight:bold; line-height:1; color:#fff; margin:3px -20px 0 0; padding:2px 3px; background:#0a263c; }
 .dashboard .box-tags .details { margin-left:20px; }
 .dashboard .box-tags li.item { margin:0 0 7px; }
@@ -1964,8 +1993,11 @@ tr.summary-details-excluded { font-style:italic; }
 .col2-right-layout .main .col-right{display: none}
  .checkout-onepage-index .col2-right-layout .main .col-right{display: block;}
 .catalog-product-view .col2-right-layout .main .col-main{padding: 0 20px 0 0; width: 100%}
-
-
+.catalog-product-view  .main .col-main{padding: 0;}
+.catalog-product-view  .add-to-links{float: right; width: 150px; }
+.catalog-product-view  .add-to-links li{width: 100%; display: block !important;}
+.catalog-product-view  .add-to-links li .separator{display: none  !important}
+.catalog-product-view .add-to-box .add-to-cart {float: right;}
 .cms-home .bx-wrapper {
     
     margin-top: 10px;
@@ -2292,3 +2324,15 @@ box-shadow: 0px 0px 22px 0px rgba(0,0,0,0.15);
 .checkout-onepage-index .col2-right-layout .col-main .page-title{border: 0;margin: 0 0 20px;}
 .checkout-onepage-index .col2-right-layout .col-main .page-title h1{color: #8B8B8B;padding: 1px 1px 1px 0px;border: 0;font-family: 'Oswald' , sans-serif;text-transform: uppercase;line-height: 16px;letter-spacing: 1px;}
 .checkout-onepage-index .col2-right-layout .col-main{margin: 0 ; padding: 0;}
+
+.dashboard .page-title h1{margin: 6px 0 0;font-family: "Oswald" , sans-serif;font-size: 21px;color: #8B8B8B;text-transform: uppercase;line-height: 1;display: inline-block;}
+
+.dashboard .box .box-content a{display: block;border: 1px solid #E8E8E8;background: #EFEFEF;padding: 3px 4px !important;font: 13px "Oswald", sans-serif;text-transform: uppercase;white-space: nowrap;color: #8B8B8B;font-weight: inherit;text-decoration: none; display: inline-block;	}
+.dashboard .box .box-title a{color: #DC6809 !important;font-weight: bold; margin: 0 20px 0 0 ; text-decoration: none;}
+.dashboard .box .box-title {border-bottom: 1px solid #efefef; margin-right: 10px;}
+
+#my_recent_tags .product-name a {color: #B7B7B7;text-decoration: none;}
+
+.dashboard .box-tags .details .tags a{color: #B4B4B4;font-size: 11px;font-family: "Arial" sans-serif;text-decoration: none;padding: 7px 12px;display: block;float: left;}
+.dashboard .box-tags .tags strong{float: left;margin: 10px 0 0 0}
+.dashboard .box-tags .details .tags li{float: left;background: #EFEFEF;margin: 5px 5px 0 0;}
