@@ -50,11 +50,8 @@
             <div class="product-name">
                 <h1><?php echo $_helper->productAttribute($_product, $_product->getName(), 'name') ?></h1>
             </div>
-
-            
-
             <?php echo $this->getReviewsSummaryHtml($_product, false, true)?>
-            <?php echo $this->getChildHtml('alert_urls') ?>
+            
             <?php echo $this->getChildHtml('product_type_data') ?>
             <?php echo $this->getTierPriceHtml() ?>
             <?php echo $this->getChildHtml('extrahint') ?>
@@ -93,8 +90,19 @@
 				<?php  if ($this->canEmailToFriend()): ?>
 					<p class="email-friend"><a href="<?php echo $this->helper('catalog/product')->getEmailToFriendUrl($_product) ?>"><?php echo $this->__('Email to a Friend') ?></a></p>
 				<?php endif;  ?>
-				<?php echo $this->getLayout()->createBlock('cms/block')->setBlockId('sosial')->toHtml() ?>
-			</div>
+							<!-- AddThis Button BEGIN -->
+				<div class="addthis_toolbox addthis_default_style ">
+					<a class="addthis_button_preferred_1"></a>
+					<a class="addthis_button_preferred_2"></a>
+					<a class="addthis_button_preferred_3"></a>
+					<a class="addthis_button_preferred_4"></a>
+					<a class="addthis_button_compact"></a>
+					<a class="addthis_counter addthis_bubble_style"></a>
+					</div>
+					<script type="text/javascript">var addthis_config = {"data_track_addressbar":true};</script>
+					<script type="text/javascript" src="//s7.addthis.com/js/300/addthis_widget.js#pubid=ra-527ca0252f87d384"></script>
+					<!-- AddThis Button END -->
+				</div>
 			<?php if ($_product->getShortDescription()):?>				
                 <div class="short-description">
                     <h2><?php echo $this->__('Quick Overview') ?></h2>
@@ -164,6 +172,9 @@
     </div>
 <?php echo $this->getChildHtml('info_tabs') ?>
 
+</div>
+<div class="box-shadow" style="float: left; margin:20px 0 0 0;">
+        <?php echo $this->getChildHtml('product_additional_data') ?>
 </div>
 <div class="box-btm">&nbsp;</div>
 
