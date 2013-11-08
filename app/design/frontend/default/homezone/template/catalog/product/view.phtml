@@ -78,19 +78,8 @@
                     <?php echo $this->getChildHtml('addto') ?>
                 </div>
             <?php endif;  ?>
-			<div class="wishlist-email2friend"> 
-			<?php  echo $this->getChildHtml('addto') ?>
-			<?php  if ($this->canEmailToFriend()): ?>
-                <p class="email-friend"><a href="<?php echo $this->helper('catalog/product')->getEmailToFriendUrl($_product) ?>"><?php echo $this->__('Email to a Friend') ?></a></p>
-            <?php endif;  ?>
-			<?php echo $this->getLayout()->createBlock('cms/block')->setBlockId('sosial')->toHtml() ?>
-			</div>
-            <?php if ($_product->getShortDescription()):?>				
-                <div class="short-description">
-                    <h2><?php echo $this->__('Quick Overview') ?></h2>
-                    <div class="std"><?php echo $_helper->productAttribute($_product, nl2br($_product->getShortDescription()), 'short_description') ?></div>
-                </div>
-            <?php endif;?>
+			
+            
 			
             <?php echo $this->getChildHtml('other');?>
 			<?php if ($_product->isSaleable() && $this->hasOptions()):?>
@@ -99,13 +88,25 @@
             <?php if ($_product->isSaleable() && $this->hasOptions()):?>
                 <?php echo $this->getChildChildHtml('container1', '', true, true) ?>
             <?php endif;?>
-			
+			<div class="wishlist-email2friend"> 
+				<?php  echo $this->getChildHtml('addto') ?>
+				<?php  if ($this->canEmailToFriend()): ?>
+					<p class="email-friend"><a href="<?php echo $this->helper('catalog/product')->getEmailToFriendUrl($_product) ?>"><?php echo $this->__('Email to a Friend') ?></a></p>
+				<?php endif;  ?>
+				<?php echo $this->getLayout()->createBlock('cms/block')->setBlockId('sosial')->toHtml() ?>
+			</div>
+			<?php if ($_product->getShortDescription()):?>				
+                <div class="short-description">
+                    <h2><?php echo $this->__('Quick Overview') ?></h2>
+                    <div class="std"><?php echo $_helper->productAttribute($_product, nl2br($_product->getShortDescription()), 'short_description') ?></div>
+                </div>
+            <?php endif;?>
         </div>
 
         <div class="product-img-box">
             <?php echo $this->getChildHtml('media') ?>
         </div>
-		<?php echo $this->getChildHtml('info_tabs') ?>
+	
         <div class="clearer"></div>
         
     </form>
@@ -161,17 +162,10 @@
     //]]>
     </script>
     </div>
+<?php echo $this->getChildHtml('info_tabs') ?>
 
-    <div class="product-collateral">
-<?php foreach ($this->getChildGroup('detailed_info', 'getChildHtml') as $alias => $html):?>
-        <div class="box-collateral <?php echo "box-{$alias}"?>">
-            <?php if ($title = $this->getChildData($alias, 'title')):?>
-            <h2><?php echo $this->escapeHtml($title); ?></h2>
-            <?php endif;?>
-            <?php echo $html; ?>
-        </div>
-<?php endforeach;?>
-        <?php echo $this->getChildHtml('upsell_products') ?>
-        <?php echo $this->getChildHtml('product_additional_data') ?>
-    </div>
+</div>
+<div class="box-btm">&nbsp;</div>
+
+<?php echo $this->getChildHtml('upsell_products') ?>
 </div>
